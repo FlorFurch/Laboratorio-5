@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script type="text/javascript" src="script.js" defer></script>
+
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header id="ancla">
+        <div class="row">
+          <div class="col-7 col-s-12 logo">
+            <div class="marquee">
+              <ul class="animacion">
+                <li><span class="text">Florencia Furch</span></li>
+              </ul>
+              <ul aria-hidden="true" class="animacion">
+                <li>
+                  <span class="text">Florencia Furch</span>
+                </li>
+              </ul>
+    
+            </div>
+            <div class="logo-animado">
+              <img src="/imgs/logo_azul.png" alt="logo" class="imagen">
+            </div>
+          </div>
+          <div class="col-5 col-s-12 menu">
+            <ul>
+              <li class="li-nav"><a href="index.html">Home</a></li>
+              <li class="li-nav"><a href="acercade.html">Acerca de</a></li>
+              <li class="li-nav"><a class="active" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+    <div id="sticky">Whatsapp: +54 9 291 4623111</div>
+    <main>
+        
+        <section class="row">
+            <div class="encabezado simple"> <h2>Ponete en contacto</h2>
+            <p>Enviame un mensaje y a la brevedad me comunico con vos.</p></div>
+
+
+           
+        <form class="col-12" id="Formulario">
+           
+        
+            <label>Nombre (requerido)<input id="nombre" onblur="myFunction()" class="input-form" name="Nombre" type="text" maxlength="20"
+                    required></label>
+            <label>Apellido<input id="apellido" onblur="myFunction()" class="input-form" name="Apellido" type="text" maxlength="20"></label>
+            <label>Email (requerido)<input onblur="myFunction()" id="email" class="input-form" name="E-mail" type="email" required></label>
+            <label>Teléfono<input onblur="myFunction()" id="tel" class="input-form" name="Telefono" type="tel"
+                    placeholder="Ingrese sin el 0 y sin el 15"></label>
+            <label>Edad<input onblur="myFunction()" id="edad" class="input-form" name="Edad" type="number" min="16" max="120"></label>
+            <label>Dirección<textarea onblur="myFunction()" id="direccion" class="input-form" name="Direccion"></textarea></label>
+            <label>Provincia<input onblur="Provincia()" list="provincia" class="datalist-form">
+                <datalist id="provincia">
+                    <option data-val="Buenos Aires">Buenos Aires</option>
+                    <option data-val="Catamarca">Catamarca</option>
+                    <option data-val="Chaco">Chaco</option>
+                    <option data-val="Chubut">Chubut</option>
+                    <option data-val="Córdoba">Córdoba</option>
+                    <option data-val="Corrientes">Corrientes</option>
+                    <option data-val="Entre Ríos">Entre Ríos</option>
+                    <option data-val="Formosa">Formosa</option>
+                    <option data-val="Jujuy">Jujuy</option>
+                    <option data-val="La Pampa">La Pampa</option>
+                    <option data-val="La Rioja">La Rioja</option>
+                    <option data-val="Mendoza">Mendoza</option>
+                    <option data-val="Misiones">Misiones</option>
+                    <option data-val="Neuquén">Neuquén</option>
+                    <option data-val="Río Negro">Río Negro</option>
+                    <option data-val="Salta">Salta</option>
+                    <option data-val="San Juan">San Juan</option>
+                    <option data-val="San Luis">San Luis</option>
+                    <option data-val="Santa Cruz">Santa Cruz</option>
+                    <option data-val="Santa Fe">Santa Fe</option>
+                    <option data-val="Santiago del Estero">Santiago del Estero</option>
+                    <option data-val="Tierra del Fuego">Tierra del Fuego</option>
+                    <option data-val="Tucumán">Tucumán</option>
+
+                </datalist>
+            </label>
+
+            <label for="codigoPostal">Código Postal:</label>
+            <input onblur="myFunction()" type="text" id="codigo-postal" name="codigo-postal" placeholder="A1234ABC" required>
+            <span id="error" style="color: red; display: none;">Formato incorrecto. Usa el formato A1234ABC.</span>
+            <span id="valido" style="color: green; display: none;">Formato correcto.</span>
+
+            
+            <fieldset>
+                <legend>Método preferido de contacto</legend>
+                <label>Correo electrónico<input name="contacto" type="radio" value="Correo electrónico" checked></label>
+                <label>Correo postal<input name="contacto" type="radio" value="Correo postal"></label>
+                <label>Teléfono<input name="contacto" type="radio" value="Teléfono"></label>
+            </fieldset>
+
+            <fieldset id="suscripciones">
+                <legend>Tipo de suscripción</legend>
+                <label>Noticias<input name="suscripcion" type="checkbox" value="Noticias"></label>
+                <label>Promociones<input name="suscripcion" type="checkbox" value="Promociones"></label>
+                <label>Alertas<input name="suscripcion" type="checkbox" value="Alertas" checked></label>
+                <label>Eventos<input name="suscripcion" type="checkbox" value="Eventos"></label>
+            </fieldset>
+            <button class="boton" id="boton-form">Cargar</button>
+        </form>
+    
+        <table class="col-12">
+            <thead>
+                <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+            </thead>
+            <tr>
+                <th>Nombre</th>
+                <td><p id="td-nombre"></p></td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td><p id="td-apellido"></p></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><p id="td-email"></p></td>
+            </tr>
+            <tr>
+                <th>Teléfono</th>
+                <td><p id="td-tel"></p></td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td><p id="td-edad"></p></td>
+            </tr>
+            <tr>
+                <th>Dirección</th>
+                <td><p id="td-direccion"></p></td>
+            </tr>
+            <tr>
+                <th>Provincia</th>
+                <td><p id="td-provincia"></p></td>
+            </tr>
+            <tr>
+                <th>Código Postal</th>
+                <td><p id="td-cp"></p></td>
+            </tr>
+            <tr>
+                <th>Método de contacto</th>
+                <td><p id="td-contacto"></p></td>
+            </tr>
+            <tr>
+                <th>Suscripción</th>
+                <td><p id="td-suscripcion"></p></td>
+            </tr>
+        </table>
+   
+    </section>
+</main>
+<div class="circulo"><a href="#ancla"> 
+    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.17 181.46"><defs><style>.cls-1{fill:#fff;}</style></defs><title>right-arrow</title><path class="cls-1" d="M45.52,99.71c-12.29,0-24.19.05-36.08,0-6.79,0-11.22-6.32-8.75-12.37a11.61,11.61,0,0,1,2.55-3.64Q43.37,43.47,83.56,3.33C88-1.08,93-1.11,97.42,3.26Q137.71,43.5,178,83.78c2.94,2.94,4.08,6.33,2.48,10.22-1.71,4.17-5.4,5.61-9.55,5.66-10.68.12-21.37,0-32.06,0h-3.32v3.53c0,46.12,0,21,0,67.11,0,7.86-3.23,11.11-11.05,11.11H56.14c-7.27,0-10.61-3.36-10.61-10.69,0-46.21,0-21.18,0-67.39Z"/></svg>
+  </a>
+  </div>
+    <footer>
+        <img src="https://web.curza.uncoma.edu.ar/images/logo_blanco.png" alt="logo">
+        <p>Centro Regional Universitario Zona Atlántica<br>
+            Monseñor Esandi y Ayacucho. Viedma(85009), Río Negro, Argentina.<br>
+
+            Teléfonos: +54-2920-422921/423772</p>
+    </footer>
+</body>
+
+</html>
